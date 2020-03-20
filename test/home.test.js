@@ -2,7 +2,7 @@ import React from "react";
 import { render, unmountComponentAtNode } from "react-dom";
 import { act } from "react-dom/test-utils";
 
-import Box from "../src/components/box";
+import Home from "../src/pages/home";
 
 let container = null;
 beforeEach(() => {
@@ -18,9 +18,7 @@ afterEach(() => {
 
 it('should renders homepage', () => {
     act(() => {
-        render(<Box />, container);
+        render(<Home />, container);
     });
-    expect(
-        container.querySelector(".linkToPage").getAttribute("href").toEqual("https://goodboost.org/good-boost-sessions")
-    )
+    expect(container).toBeVisible();
 });
