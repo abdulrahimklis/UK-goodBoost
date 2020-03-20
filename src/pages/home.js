@@ -15,7 +15,7 @@ class Home extends React.Component {
     render() {
         return(
             <>
-                <Layout display={'flex'} justifyContent={'center'} width={'80vw'} margin={'0 auto'} id='homeWrapper'>
+                <Layout display={'flex'} justifyContent={'center'} flexDirectionColumn={'960'}  width={'80vw'} margin={'0 auto'} id='homeWrapper'>
                     <Box data={this.state.data} />
                 </Layout>
             </>

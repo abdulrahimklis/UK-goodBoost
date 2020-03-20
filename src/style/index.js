@@ -8,7 +8,7 @@ export const Layout = styled.div`
   align-items: ${props => props.alignItems ? props.alignItems : ""};
   justify-content: ${props => props.justifyContent ? props.justifyContent : ""};
   margin: ${props => props.margin ? props.margin : ""};
-  flex-direction: ${props => props.flexDirection ? props.flexDirection : ""};
+  flex-direction: ${props => (props.flexDirection >= 960) ? 'row' : 'column'};
 `;
 
 export const CustomButton = styled.button`
